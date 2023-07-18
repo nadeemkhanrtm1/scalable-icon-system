@@ -43,7 +43,7 @@ interface IconProps {
 const Icon: React.FC<IconProps> = ({ name, color, size, transform }) => {
   return (
     <StyledSVGIcon
-      src={`../../../src/${ICONS_NAME[name]}`}
+      src={`../../../src/${ICONS_NAME[String(name) as keyof typeof ICONS_NAME]}`}
       color={color}
       size={size}
       transform={transform}
